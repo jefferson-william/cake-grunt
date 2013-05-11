@@ -4,7 +4,6 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
-		// CSS
 		compass: {
 			prod: {
 				options: {
@@ -21,7 +20,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// JAVASCRIPT
 		jam: {
 			prod: {
 				src: ['webroot/js/src/*.js'],
@@ -32,17 +30,16 @@ module.exports = function(grunt) {
 				dest: 'webroot/js/main.js',
 				options: {
 					verbose: true,
-					nominify: true
+					nominify: true,
+					wrap: true
 				}
 			}
 		},
 
-		// LINT JS
 		jshint: {
 			files: ['Gruntfile.js', 'webroot/js/src/**/*.js']
 		},
 
-		// WATCH AND RUN TASKS
 		watch: {
 			css: {
 				files: ['webroot/css/src/**/*.scss'],

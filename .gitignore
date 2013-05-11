@@ -1,3 +1,4 @@
-/node_modules/
-/jam/
-/.sass-cache/
+node_modules
+jam
+.sass-cache
+webroot/components
